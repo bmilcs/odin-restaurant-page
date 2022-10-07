@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Allison&family=Bebas+Neue&family=Qwigley&family=Roboto:wght@400;900&family=Special+Elite&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font-family: "Allison", cursive;
+  font-family: "Bebas Neue", cursive;
+  font-family: "Qwigley", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Special Elite", cursive; */
+  --ff-main: "Roboto", sans-serif;
+  --ff-title: "Allison", cursive;
+}
+
+body {
+  background: rgb(17, 17, 17);
+}
