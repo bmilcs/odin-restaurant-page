@@ -22,15 +22,21 @@ body {
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../img/burger.jpg") no-repeat bottom center fixed;
+  background-size: cover;
+  /* media-query: smaller screen sizes, move image to left */
+  /* background-position: calc(50% - 150px) 50%; */
 }
 
 .header-text {
-  font-family: var(--ff-title3);
+  font-family: var(--ff-title2);
   color: white;
   font-size: 5rem;
   font-weight: 400;
+  text-align: center;
+  padding: 1rem 2rem;
 }
 
 .main-image {
