@@ -9,15 +9,30 @@
 }
 
 :root {
-  /* font-family: "Allison", cursive;
-  font-family: "Bebas Neue", cursive;
-  font-family: "Qwigley", cursive;
-  font-family: "Roboto", sans-serif;
-  font-family: "Special Elite", cursive; */
+  --ff-title: "Allison", cursive;
+  --ff-title2: "Bebas Neue", cursive;
+  --ff-title3: "Qwigley", cursive;
+  --ff-title4: "Special Elite", cursive;
   --ff-main: "Roboto", sans-serif;
   --ff-title: "Allison", cursive;
 }
 
 body {
   background: rgb(17, 17, 17);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-text {
+  font-family: var(--ff-title3);
+  color: white;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.main-image {
+  max-width: 100vw;
 }

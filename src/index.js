@@ -1,2 +1,17 @@
-console.log("Welcome to my restaurant page!");
 import "./scss/main.css";
+import { createElement } from "./utils/create-element";
+import burgerJpg from "./img/burger.jpg";
+
+const container = createElement("div", "container");
+
+const header = createElement("h1", "header-text", "Burger World");
+
+const burgerImg = createElement("img", "main-image", "Burger Image");
+burgerImg.src = burgerJpg;
+
+// console.log(burgerJpg);
+
+// container.style.backgroundImage = burgerJpg;
+
+container.appendChild(header);
+document.querySelector("body").appendChild(container);
