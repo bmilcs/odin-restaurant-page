@@ -6,8 +6,11 @@ Welcome to Bryan Miller's Restaurant Page Project, the [tenth assignment](https:
   - ES6 Modules
   - `npm`
   - `webpack`
-- HTML
-- CSS
+    - dev server
+    - asset management
+    - html plugin
+    - sass loader
+- SASS
 
 ## Summary
 
