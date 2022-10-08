@@ -25,5 +25,10 @@ In progress
 ## Deployment
 
 ```sh
-git clone git@github.com:bmilcs/odin-restaurant-page.git
+# clone repo
+git clone https://github.com/bmilcs/odin-restaurant-page.git
+
+# install dev dependencies
+cd odin-restaurant-page
+npm install --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader sass-loader sass
 ```
