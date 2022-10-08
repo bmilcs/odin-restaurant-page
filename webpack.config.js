@@ -6,6 +6,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "img/[name].[ext]",
     clean: true, // remove unused files
   },
   mode: "development",
@@ -55,5 +56,11 @@ module.exports = {
         type: "asset/resource",
       },
     ],
+  },
+  devServer: {
+    static: "./dist",
+  },
+  optimization: {
+    runtimeChunk: "single", // dev-server
   },
 };
