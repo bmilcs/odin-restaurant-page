@@ -23,7 +23,7 @@ In progress
 
 ## Screenshots
 
-In progress
+![Screenshot](src/img/screenshot.png)
 
 ## Deployment
 
