@@ -1,0 +1,47 @@
+// body container
+
+#container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../img/burger.jpg") no-repeat bottom center fixed;
+  background-size: cover;
+  /* media-query: smaller screen sizes, move image to left */
+  /* background-position: calc(50% - 150px) 50%; */
+}
+
+// hero container: title, subtitle, p & button
+
+.hero-container {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 2rem;
+
+  padding-inline: 10vw;
+
+  background: rgba(0, 0, 0, 50%);
+}
+
+.hero-title {
+  font-family: var(--ff-title2);
+  color: white;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 0.7;
+}
+
+.hero-subtitle {
+  font-family: var(--ff-title2);
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: var(--clr-neutral-200);
+}
+
+.hero-p {
+  max-width: 52ch;
+}
