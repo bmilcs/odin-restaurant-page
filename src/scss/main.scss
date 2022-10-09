@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Allison&family=Bebas+Neue&family=Qwigley&family=Roboto:wght@400;900&family=Special+Elite&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-main: "Roboto", sans-serif;
+  --ff-title: "Allison", cursive;
+  --ff-title2: "Bebas Neue", cursive;
+  --ff-title3: "Qwigley", cursive;
+  --ff-title4: "Special Elite", cursive;
+  --ff-title: "Allison", cursive;
+
+  --clr-neutral-100: rgb(255, 255, 255);
+  --clr-neutral-200: rgb(176, 176, 176);
+  --clr-neutral-800: rgb(45, 45, 45);
+  --clr-neutral-900: #000;
+
+  --border-radius: 0.5rem;
+
+  --transition: all 0.2s ease-in-out;
+
+  /* page defaults */
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+
+  font-family: var(--ff-main);
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+#container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../img/burger.jpg") no-repeat bottom center fixed;
+  background-size: cover;
+  /* media-query: smaller screen sizes, move image to left */
+  /* background-position: calc(50% - 150px) 50%; */
+}
+
+.header-container {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 2rem;
+
+  padding-inline: 10vw;
+
+  background: rgba(0, 0, 0, 50%);
+}
+
+.header-text {
+  font-family: var(--ff-title2);
+  color: white;
+  font-size: 6rem;
+  font-weight: 400;
+}
+
+.sub-header-text {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: var(--clr-neutral-200);
+}
+
+.sub-heading {
+  max-width: 52ch;
+}
+
+/* global stylings */
+
+button {
+  padding: 1em 3em;
+
+  font: inherit;
+  font-weight: bold;
+
+  background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+
+  border-radius: var(--border-radius);
+  border: 0;
+
+  transition: var(--transition);
+
+  &:hover {
+    // color: var(--clr-neutral-800);
+    background: var(--clr-neutral-800);
+  }
+}
+
+p {
+  line-height: 1.7rem;
+}
