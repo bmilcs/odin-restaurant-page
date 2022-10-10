@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Restaurant Page: Odin Project #10",
+      title: "Burger World: Odin Project #10",
       template: "./src/template.html",
       filename: "index.html",
     }),
