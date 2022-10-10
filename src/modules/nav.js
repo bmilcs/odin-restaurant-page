@@ -5,7 +5,7 @@ import { menu } from "./menu";
 import { contact } from "./contact";
 import "../scss/nav.scss";
 
-const prepareNavBar = () => {
+const prepareNav = () => {
   const navItems = ["home", "menu", "contact"];
   const navContainer = createElement("nav");
   const navUL = createElement("ul");
@@ -43,6 +43,6 @@ const prepareNavBar = () => {
   return navContainer;
 };
 
-const navBar = prepareNavBar();
+const nav = prepareNav();
 
-export { navBar };
+export { nav };

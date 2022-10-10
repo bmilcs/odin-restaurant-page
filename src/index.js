@@ -1,9 +1,9 @@
 import { home } from "./modules/home";
-import { navBar } from "./modules/navbar";
+import { nav } from "./modules/nav";
 
 const mainContainer = document.querySelector("#container");
 
-mainContainer.appendChild(navBar);
+mainContainer.appendChild(nav);
 mainContainer.appendChild(home);
 
 export { mainContainer };
