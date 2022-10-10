@@ -1,22 +1,26 @@
-import "../scss/nav.scss";
-import { home } from "./home";
+import { createElement } from "./utils/create-element";
 import { mainContainer } from "..";
+import { home } from "./home";
+import { menu } from "./menu";
+import { contact } from "./contact";
+import "../scss/nav.scss";
 
 const prepareNavBar = () => {
   const navItems = ["home", "menu", "contact"];
-  const navContainer = document.createElement("nav");
-  const navUL = document.createElement("ul");
+  const navContainer = createElement("nav");
+  const navUL = createElement("ul");
 
-  // create array of nav elements
+  // create array of nav elements (li's)
+
   const navElements = navItems.map((navItem) => {
-    const li = document.createElement("li");
-    li.textContent = navItem;
+    const li = createElement("li", "", navItem);
     li.dataset.page = navItem;
     navUL.appendChild(li);
     return li;
   });
 
   // callback: nav item clicked
+
   const navigateToPage = (e) => {
     // hide current page
     navContainer.nextSibling.remove();
@@ -25,10 +29,12 @@ const prepareNavBar = () => {
     const navTarget = e.target.dataset.page;
 
     if (navTarget === "home") mainContainer.appendChild(home);
-    // else if (navTarget === "menu") mainContainer.appendChild(menu);
+    if (navTarget === "menu") mainContainer.appendChild(menu);
+    if (navTarget === "contact") mainContainer.appendChild(contact);
   };
 
-  // add eventlistener to all elements
+  // add eventlistener to all nav li elements
+
   navElements.forEach((element) =>
     element.addEventListener("click", navigateToPage)
   );
