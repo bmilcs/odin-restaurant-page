@@ -20,6 +20,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Restaurant Page: Odin Project #10",
+      template: "./src/template.html",
+      filename: "index.html",
     }),
   ],
   module: {
