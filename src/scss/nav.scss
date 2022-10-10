@@ -1,11 +1,17 @@
 nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-
   padding: 2rem 1rem;
+  display: flex;
+  background: var(--clr-neutral-900);
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 
   ul {
+    margin-left: auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +23,9 @@ nav {
   li {
     position: relative;
 
-    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+
+    padding: 0.5rem 1rem;
 
     font-family: var(--ff-title2);
     font-size: 1.75rem;

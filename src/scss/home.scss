@@ -3,17 +3,22 @@
 #container {
   min-width: 100vw;
   min-height: 100vh;
-  background: url("../img/burger.jpg") no-repeat bottom center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25)),
+    url("../img/burger.jpg") no-repeat bottom center fixed;
   background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: var(--transition);
+  transition: opacity 3s ease-in-out;
   /* media-query: smaller screen sizes, move image to left */
   /* background-position: calc(50% - 150px) 50%; */
 }
 
-// hero container: title, subtitle, p & button
+// home container: title, subtitle, p & button
 
-.hero-container {
-  height: 100vh;
-
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,10 +28,10 @@
 
   padding-inline: 10vw;
 
-  background: rgba(0, 0, 0, 50%);
+  transition: var(--transition);
 }
 
-.hero-title {
+.home-title {
   font-family: var(--ff-title2);
   color: white;
   font-size: 6rem;
@@ -34,7 +39,7 @@
   line-height: 0.8;
 }
 
-.hero-subtitle {
+.home-subtitle {
   font-family: var(--ff-title2);
   text-transform: uppercase;
   font-size: 2.6rem;
@@ -42,6 +47,6 @@
   color: var(--clr-neutral-200);
 }
 
-.hero-p {
+.home-p {
   max-width: 52ch;
 }

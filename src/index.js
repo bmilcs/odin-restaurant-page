@@ -1,15 +1,9 @@
-import { prepareHomepage } from "./modules/home";
-import { prepareNavBar } from "./modules/navbar";
+import { home } from "./modules/home";
+import { navBar } from "./modules/navbar";
 
-const renderSite = () => {
-  const mainContainer = document.querySelector("#container");
+const mainContainer = document.querySelector("#container");
 
-  // homepage
-  const home = prepareHomepage();
-  const nav = prepareNavBar();
+mainContainer.appendChild(navBar);
+mainContainer.appendChild(home);
 
-  mainContainer.appendChild(nav);
-  mainContainer.appendChild(home);
-};
-
-renderSite();
+export { mainContainer };
