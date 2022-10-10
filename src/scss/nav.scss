@@ -1,0 +1,56 @@
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 2rem 1rem;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+
+    padding: 0.5rem 1.5rem;
+
+    font-family: var(--ff-title2);
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+
+    color: var(--clr-neutral-200);
+    transition: var(--transition);
+  }
+
+  li:hover {
+    color: var(--clr-neutral-100);
+  }
+
+  li:hover::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    height: 5px;
+
+    background: var(--clr-accent-100);
+
+    animation: drawline 0.3s ease-in-out forwards;
+  }
+
+  @keyframes drawline {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}

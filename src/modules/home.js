@@ -1,12 +1,9 @@
 import { createElement } from "./utils/create-element";
-import "./scss/global.scss";
-import "./scss/home.scss";
+import "../scss/global.scss";
+import "../scss/home.scss";
 
-export const renderHomepage = () => {
-  // main container: all of page contents
-  const mainContainer = createElement("div", "", "", "container");
-
-  // hero container: call to action section: page title, header, p & button
+export const prepareHomepage = () => {
+  // hero container: page title, header, p & button
   const heroContainer = createElement("div", "hero-container");
 
   // title container: hero title & subtitle
@@ -39,7 +36,5 @@ export const renderHomepage = () => {
   heroContainer.appendChild(p);
   heroContainer.appendChild(button);
 
-  mainContainer.appendChild(heroContainer);
-
-  document.querySelector("body").appendChild(mainContainer);
+  return heroContainer;
 };
