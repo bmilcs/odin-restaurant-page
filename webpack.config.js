@@ -3,20 +3,18 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
+
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "img/[name].[ext]",
     clean: true, // remove unused files
   },
+
   mode: "development",
+
   devtool: "inline-source-map", // debugging
-  devServer: {
-    static: "./dist",
-  },
-  optimization: {
-    runtimeChunk: "single", // dev-server
-  },
+
   plugins: [
     new HtmlWebpackPlugin({
       title: "Burger World: Odin Project #10",
@@ -24,12 +22,14 @@ module.exports = {
       filename: "index.html",
     }),
   ],
+
   module: {
     rules: [
       {
         test: /\.css$/i, // css
         use: ["style-loader", "css-loader"],
       },
+
       {
         test: /\.s[ac]ss$/i, // sass
         use: [
@@ -49,19 +49,28 @@ module.exports = {
           },
         ],
       },
+
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i, // images
+        test: /\.(png|jpg|jpeg|gif)$/i, // images
         type: "asset/resource",
       },
+
+      {
+        test: /\.svg$/i,
+        use: "raw-loader",
+      },
+
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i, // fonts
         type: "asset/resource",
       },
     ],
   },
+
   devServer: {
     static: "./dist",
   },
+
   optimization: {
     runtimeChunk: "single", // dev-server
   },
