@@ -3,6 +3,7 @@ import { mainContainer } from "..";
 import { home } from "./home";
 import { menu } from "./menu";
 import { contact } from "./contact";
+import { footer } from "./footer";
 import "../scss/nav.scss";
 
 const prepareNav = () => {
@@ -28,9 +29,9 @@ const prepareNav = () => {
     // acquire name of page they want to visit
     const navTarget = e.target.dataset.page;
 
-    if (navTarget === "home") mainContainer.appendChild(home);
-    if (navTarget === "menu") mainContainer.appendChild(menu);
-    if (navTarget === "contact") mainContainer.appendChild(contact);
+    if (navTarget === "home") mainContainer.insertBefore(home, footer);
+    if (navTarget === "menu") mainContainer.insertBefore(menu, footer);
+    if (navTarget === "contact") mainContainer.insertBefore(contact, footer);
   };
 
   // add eventlistener to all nav li elements
