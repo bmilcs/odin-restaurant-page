@@ -18,7 +18,9 @@
   --clr-neutral-100: rgb(255, 255, 255);
   --clr-neutral-200: rgb(176, 176, 176);
   --clr-neutral-800: rgb(45, 45, 45);
+  --clr-neutral-trans: rgba(0, 0, 0, 0.65);
   --clr-neutral-900: #000;
+
   --clr-accent-100: rgb(36, 207, 237);
 
   --border-radius: 0.5rem;
@@ -68,4 +70,14 @@ button {
 
 p {
   line-height: 1.75rem;
+}
+
+h1:not(.home-title) {
+  position: relative;
+
+  padding-block: 1rem;
+
+  font-family: var(--ff-title2);
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
 }

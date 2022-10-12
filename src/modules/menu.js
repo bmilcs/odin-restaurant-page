@@ -17,8 +17,8 @@ class MenuItem {
 
     const menuItemElements = [
       createElement("h2", "menu-item-name", this.name),
-      createElement("h3", "menu-item-price", this.price),
       createElement("p", "menu-item-ingredients", this.ingredients),
+      createElement("h3", "menu-item-price", this.price),
     ];
 
     menuItemElements.forEach((ele) => menuItemContainer.appendChild(ele));
@@ -65,7 +65,7 @@ const prepareMenu = () => {
   const menuContainer = createElement("div", "menu-container");
 
   const menuElements = [
-    createElement("h1", "header-h1", "Menu"),
+    createElement("h1", "menu-h1", "Menu"),
     ...prepMenuItemContainers(),
   ];
 
