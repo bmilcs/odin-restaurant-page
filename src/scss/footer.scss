@@ -39,24 +39,23 @@
       top: transform(translate(-50%, -50%));
 
       height: 1px;
-
       width: 0px;
+
       background: var(--clr-accent-100);
-      text-align: right;
+
       transition: var(--transition);
     }
 
-    &:hover:before {
-      width: var(--size);
+    &::before {
       left: calc(-1rem - var(--size));
     }
-    &:hover:after {
-      width: var(--size);
+    &::after {
       right: calc(-1rem - var(--size));
     }
 
     &:hover::before,
     &:hover::after {
+      width: var(--size);
     }
   }
 
