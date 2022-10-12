@@ -3,36 +3,30 @@ import "../scss/global.scss";
 import "../scss/home.scss";
 
 const prepareHomepage = () => {
-  // home container: title container, p & button
+  // home container
   const homeContainer = createElement("div", "home-container");
 
-  // title container: home title & subtitle
+  // title container: burger world & best burger h1/h2
   const titleContainer = createElement("div", "title-container");
 
-  const h1 = createElement("h1", "home-title", "Burger World");
+  const titleElements = [
+    createElement("h1", "home-title", "Burger World"),
+    createElement("h2", "home-subtitle", "home of the world's BEST burger"),
+  ];
 
-  const h2 = createElement(
-    "h2",
-    "home-subtitle",
-    "home of the world's BEST burger"
-  );
+  titleElements.forEach((ele) => titleContainer.appendChild(ele));
 
-  const p = createElement(
-    "p",
-    "home-p",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-  );
+  const homeElements = [
+    titleContainer,
+    createElement(
+      "p",
+      "home-p",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+    ),
+    createElement("button", "home-btn", "Order Now"),
+  ];
 
-  const button = createElement("button", "home-btn", "Order Now");
-
-  // assemble page elements
-
-  titleContainer.appendChild(h1);
-  titleContainer.appendChild(h2);
-
-  homeContainer.appendChild(titleContainer);
-  homeContainer.appendChild(p);
-  homeContainer.appendChild(button);
+  homeElements.forEach((ele) => homeContainer.appendChild(ele));
 
   return homeContainer;
 };
