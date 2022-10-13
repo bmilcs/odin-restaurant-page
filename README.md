@@ -23,7 +23,29 @@ In progress
 
 ## Screenshots
 
-![Screenshot](src/img/screenshot.png)
+> Mobile Screenshot: Home
+
+![Mobile Home Screenshot](img/mobile-home.png)
+
+> Mobile Screenshot: Menu
+
+![Mobile Menu Screenshot](img/mobile-menu.png)
+
+> Mobile Screenshot: Contact
+
+![Mobile Contact Screenshot](img/mobile-contact.png)
+
+> Desktop Screenshot: Home
+
+![Desktop Home Screenshot](img/desktop-home.png)
+
+> Desktop Screenshot: Menu
+
+![Desktop Menu Screenshot](img/desktop-menu.png)
+
+> Desktop Screenshot: Contact
+
+![Desktop Contact Screenshot](img/desktop-contact.png)
 
 ## Deployment
 
