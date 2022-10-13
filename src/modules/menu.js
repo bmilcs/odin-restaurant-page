@@ -48,9 +48,29 @@ const prepMenuItemContainers = () => {
       "Beef patty, pepperjack cheese, onion rings, lettuce, jalepeno, fried egg & bacon sriracha aioli"
     ),
     new MenuItem(
+      "Death By Keto",
+      29.99,
+      "Bacon & sausage mix between two beef patties, lettuce, cheddar cheese & mayo"
+    ),
+    new MenuItem(
       "Americana",
       14.99,
       "Beef patty, American cheese, bacon, lettuce, tomato, pickles & mayo"
+    ),
+    new MenuItem(
+      "Juicy Lucy",
+      18.99,
+      "Beef patty stuffed with cheddar cheese, pickled slaw & fried shallots"
+    ),
+    new MenuItem(
+      "Fancy Pants",
+      21.99,
+      "Ragu beef patty stuffed with goat cheese, topped with fried lobster & fresh parsley"
+    ),
+    new MenuItem(
+      "Nacho Average Burger",
+      19.99,
+      "Beef patty, melted Mexican cheese blend, salsa & tortilla chips"
     )
   );
 
@@ -64,10 +84,20 @@ const prepMenuItemContainers = () => {
 const prepareMenu = () => {
   const menuContainer = createElement("div", "menu-container");
 
-  const menuElements = [
+  const menuHeaderContainer = createElement("div", "menu-title-container");
+
+  const menuHeaderElements = [
     createElement("h1", "menu-h1", "Menu"),
-    ...prepMenuItemContainers(),
+    createElement(
+      "p",
+      "menu-p",
+      "All burgers come with a french fries and a beverage of your choice."
+    ),
   ];
+
+  menuHeaderElements.forEach((ele) => menuHeaderContainer.appendChild(ele));
+
+  const menuElements = [menuHeaderContainer, ...prepMenuItemContainers()];
 
   menuElements.forEach((ele) => menuContainer.appendChild(ele));
 
