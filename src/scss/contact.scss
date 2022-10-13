@@ -1,1 +1,49 @@
 @import url("./global.scss");
+
+.contact-container {
+  padding-inline: 10vw;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    padding-bottom: 0;
+  }
+
+  h3 {
+    font-family: var(--ff-title2);
+    font-weight: normal;
+    font-size: 2rem;
+    color: var(--clr-accent-100);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-top: auto;
+    display: grid;
+    font-family: var(--ff-title3);
+    font-size: 4rem;
+    font-weight: normal;
+
+    padding-block: 2rem;
+  }
+
+  p {
+    max-width: 40ch;
+  }
+
+  p:last-of-type {
+    margin-top: 1rem;
+    font-style: italic;
+  }
+
+  p:nth-of-type(2) {
+    margin-top: auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  p:nth-of-type(1n + 3) {
+    text-decoration: italic;
+  }
+}
