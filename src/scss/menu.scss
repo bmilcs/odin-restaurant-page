@@ -1,11 +1,8 @@
 @import url("./global.scss");
 
 .menu-container {
-  position: relative;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
-  grid-template-rows: min-content repeat(100px);
   gap: 1.5rem;
 
   justify-self: center;
