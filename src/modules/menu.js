@@ -64,7 +64,7 @@ const prepMenuItemContainers = () => {
     ),
     new MenuItem(
       "Fancy Pants",
-      21.99,
+      34.99,
       "Ragu beef patty stuffed with goat cheese, topped with fried lobster & fresh parsley"
     ),
     new MenuItem(
