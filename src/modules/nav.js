@@ -1,4 +1,4 @@
-import { createElement } from "./utils/create-element";
+import { createElement } from "./utils/create-element.js";
 import { mainContainer } from "..";
 import { home } from "./home";
 import { menu } from "./menu";
